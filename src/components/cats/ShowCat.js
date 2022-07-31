@@ -52,6 +52,8 @@ const ShowCat = (props) => {
                 </div> 
                     
                 </Card.Text>
+                <Button text={'Edit ' + cat.name} onClick={() => navigate(`/cats/${cat._id}/edit`)}/>
+
                 <Button text={'Delete ' + cat.name} onClick={() => {DeleteCat(cat._id); navigate('/')}}/>
             </Card.Body>
         </Card>

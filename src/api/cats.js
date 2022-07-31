@@ -33,3 +33,15 @@ export const deleteCat = (id) => {
 		url: apiUrl + '/cats/' + id
 	})
 }
+
+export const editCat = (id, newCat) => {
+	return axios({
+		method: 'PATCH',
+		url: apiUrl + '/cats/' + id,
+		data: {
+			cat: {
+				...newCat
+			}
+		}
+	})
+}

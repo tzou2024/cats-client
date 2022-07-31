@@ -1,4 +1,3 @@
-import React from 'react'
 import { deleteCat } from '../../api/cats'
 
 const DeleteCat = (catId) => {

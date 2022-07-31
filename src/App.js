@@ -15,6 +15,7 @@ import ChangePassword from './components/auth/ChangePassword'
 import CatsIndex from './components/cats/CatsIndex'
 import ShowCat from './components/cats/ShowCat'
 import CreateCat from './components/cats/CreateCat'
+import EditCat from './components/cats/EditCat'
 
 const App = () => {
 
@@ -75,6 +76,12 @@ const App = () => {
 		  path={`/cats/:id`}
 		  element={
 			  <ShowCat msgAlert={msgAlert} />
+		  }
+		  />
+		  <Route
+		  path={`/cats/:id/edit`}
+		  element={
+			  <EditCat msgAlert={msgAlert} />
 		  }
 		  />
 		  <Route
