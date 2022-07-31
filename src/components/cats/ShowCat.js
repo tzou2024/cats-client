@@ -4,6 +4,8 @@ import Loading from '../shared/Loading'
 import { getOneCat } from '../../api/cats'
 import messages from '../shared/AutoDismissAlert/messages'
 import { Container, Card } from 'react-bootstrap'
+import DeleteCat from './DeleteCat'
+import Button from '../shared/Button'
 
 const ShowCat = (props) => {
     const {msgAlert} = props
@@ -50,6 +52,7 @@ const ShowCat = (props) => {
                 </div> 
                     
                 </Card.Text>
+                <Button text={'Delete ' + cat.name} onClick={() => {DeleteCat(cat._id); navigate('/')}}/>
             </Card.Body>
         </Card>
         </Container>

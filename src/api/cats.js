@@ -26,3 +26,10 @@ export const createCat = (newCat) => {
 		},
 	})
 }
+
+export const deleteCat = (id) => {
+	return axios({
+		method: 'DELETE',
+		url: apiUrl + '/cats/' + id
+	})
+}
